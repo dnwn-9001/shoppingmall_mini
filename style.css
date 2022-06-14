@@ -1,0 +1,121 @@
+:root {
+  /* color */
+  --color-black: #3f454d;
+  --color-white: #ffffff;
+  --color-blue: #3b88c3;
+  --color-yellow: #fbbe28;
+  --color-pink: #fd7f84;
+  --color-light-grey: #dfdfdf;
+
+  /* animation */
+  --animation-duration: 300ms;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--color-black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Logo */
+.main {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.main__img {
+  cursor: pointer;
+  transition: transform var(--animation-duration) ease;
+}
+
+.main__img:hover {
+  transform: scale(1.1);
+}
+
+/* Button */
+.button {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.btn {
+  margin: 0 10px;
+  background-color: transparent;
+  border: 1px solid var(--color-black);
+  cursor: pointer;
+  transition: transform var(--animation-duration) ease;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.imgBtn {
+  width: 50px;
+  height: 50px;
+}
+
+.btn.colorBtn {
+  height: 50px;
+  padding: 0 16px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 10%;
+}
+
+.btn.colorBtn.blue {
+  background-color: var(--color-blue);
+}
+
+.btn.colorBtn.yellow {
+  background-color: var(--color-yellow);
+}
+
+.btn.colorBtn.pink {
+  background-color: var(--color-pink);
+}
+
+/* List */
+.list {
+  margin: 0;
+  padding: 0;
+}
+
+.list__dtl {
+  background-color: var(--color-white);
+  border: none;
+  border-radius: 4%;
+  margin: 8px 0;
+  width: 500px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.list__thumbnail,
+.item__description {
+  background-color: var(--color-white);
+}
+
+.list__thumbnail {
+  width: 50px;
+  height: 50px;
+  margin: 4px 20px;
+}
+
+.item__description {
+  font-weight: bold;
+}
+
+.list__dtl.invisible {
+  opacity: 0;
+}
