@@ -3,7 +3,7 @@
 // Fetch the items from the JSON file
 // fetch함수를 통해 data.json의 데이터를 response 객체로 리턴받기
 function loadItems() {
-  return fetch("../data/data.json")
+  return fetch("data/data.json")
     .then((response) => response.json())
     .then((json) => json.items);
 }
@@ -11,6 +11,8 @@ function loadItems() {
 //html로 만든 데이터를 list에 그리기.
 function displayItems(items) {
   const container = document.querySelector(".list");
+  //const html = items.map((item) => creatHTMLString(item)).join("");
+  //console.log(html);
   container.innerHTML = items.map((item) => creatHTMLString(item)).join("");
 }
 
@@ -27,8 +29,8 @@ function creatHTMLString(item) {
 // 버튼 클릭시 카테고리에 맞는 리스트 보여지게하기.
 function onButtonClick(event, items) {
   const dataset = event.target.dataset;
-  const key = dataset.key; //type
-  const value = dataset.value; //tshirt
+  const key = dataset.key;
+  const value = dataset.value;
 
   if (key == null || value == null) {
     return;
@@ -42,14 +44,13 @@ function onButtonClick(event, items) {
 }
 
 // ** 위의 filtered를 사용하는 방법대신 classList.add/remove 방법을 사용하면
-//매번 업데이트하지않고 css를 통해 원하는 것만 보여줄수있음.
+// 매번 업데이트하지않고 css를 통해 원하는 것만 보여줄수있음.
 // function updateItems(items, key, value) {
 //   items.forEach((item) => {
 //     if (item[key] === value) {
-//       console.log(item);
-//       item.classList.add("invisible");
-//     } else {
 //       item.classList.remove("invisible");
+//     } else {
+//       item.classList.add("invisible");
 //     }
 //   });
 // }
