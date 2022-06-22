@@ -36,7 +36,6 @@ function onButtonClick(event, items) {
 
   // container가 매번 업데이트되는 문제.
   const filtered = items.filter((item) => item[key] === value);
-  console.log(filtered);
   displayItems(filtered);
 
   // updateItems(items, key, value);
