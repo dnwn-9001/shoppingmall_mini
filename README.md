@@ -24,5 +24,7 @@ fetch 함수를 이용하여 data.json에 있는 아이템 리스트 데이터�
 ![image](https://user-images.githubusercontent.com/106906742/175279467-4f33868f-8741-412b-ad4c-0101ecca201e.png)
 ![image](https://user-images.githubusercontent.com/106906742/175279574-9cdbc63a-67f6-4ea8-86f3-3de470092a13.png)
 
+### :cd:Lecture:cd:
+Dream Coding
 
 </div>
